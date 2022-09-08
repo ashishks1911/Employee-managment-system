@@ -1,0 +1,19 @@
+.la{
+	font-size: 1.5vw;
+}
+
+.laa{
+	font-size:1.1vw;
+}
+.tb{
+	font-size:1.3vw;
+}
+span{
+	color:red;
+}
+
+.btn{
+	background-color: blue;
+	color:white;
+	padding: 0.1vw 0.8vw;
+}

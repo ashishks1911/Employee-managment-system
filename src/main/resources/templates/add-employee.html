@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="navbar"></div>
+
+<body onload="makeActive('add')">
+<div class="container">
+	<div class="card mx-auto col-md-8">
+		<h3></h3>
+		<div class="card-body">
+		<form action="save-record" method="post">
+			<div class="row form-group">
+				<div class="col-md-6">
+					<label for="eid">Enter Employee ID</label><span>*</span>
+					<input type="text" name="eid" id="eid" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label for="name">Enter Employee Name</label><span>*</span>
+					<input type="text" name="name" id="name" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label for="depart">Enter Employee Department</label><span>*</span>
+					<input type="text" name="department" id="depart" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-6">
+					<label for="city">Enter Employee City</label><span>*</span>
+					<input type="text" name="city" id="city" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<label for="salary">Enter Employee Salary</label><span>*</span>
+					<input type="text" name="salary" id="salary" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<button class="btn btn-primary">Save Record</button>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<span>*</span> Mandatory Field
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

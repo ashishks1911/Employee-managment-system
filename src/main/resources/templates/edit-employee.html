@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="navbar"></div>
+
+<body onload="makeActive('edit')">
+<div class="container">
+	<div class="card mx-auto col-md-8">
+		<h3></h3>
+		<div class="card-body">
+		<form action="update-record" method="post">
+			<div class="row form-group">
+				<div class="col-md-6">
+					<label for="eid">Employee ID</label>
+					<input type="text" name="eid" id="eid" readonly th:value="${employee.eid}" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label for="name">Edit Employee Name</label>
+					<input type="text" name="name" id="name" th:value="${employee.name}" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label for="depart">Edit Employee Department</label>
+					<input type="text" name="department" id="depart" th:value="${employee.department}" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-6">
+					<label for="city">Edit Employee City</label>
+					<input type="text" name="city" id="city" th:value="${employee.city}" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<label for="salary">Edit Employee Salary</label>
+					<input type="text" name="salary" id="salary" th:value="${employee.salary}" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<button class="btn btn-primary">Update Record</button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

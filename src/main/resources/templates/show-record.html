@@ -1,0 +1,47 @@
+<html xlmns:th="http://www.thymeleaf.org">
+<div th:insert="navbar"></div>
+<head>
+	<style>
+		input{
+			font-size:1.2vw;
+		}
+		.btn{
+			font-size:1.5vw;
+		}
+		
+		th,td{
+			padding:0.3vw 2.5vw; 
+			border:1px solid;
+		}
+	</style>
+</head>
+<body>
+	<div style="text-align: center;">
+	<table style="margin-top:6vw;border-collapse:collapse;font-size: 1.5vw;display:inline-block;">
+		<tr style="color:red;background-color: yellow;">
+			<th colspan="2" style="text-align: center;font-size: 1.8vw;">Employee Details</th>
+		</tr>
+		<tr>
+			<td>Employee Id</td>
+			<td th:text="${employee.eid}"></td>
+		</tr>
+		<tr>
+			<td>Employee Name</td>
+			<td th:text="${employee.name}"></td>
+		</tr>
+		<tr>
+			<td>Employee City</td>
+			<td th:text="${employee.city}"></td>
+		</tr>
+		<tr>
+			<td>Employee Department</td>
+			<td th:text="${employee.department}"></td>
+		</tr>
+		<tr>
+			<td>Employee Salary</td>
+			<td th:text="${employee.salary}"></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="navbar"></div>
+
+<body onload="makeActive('list')">
+<div class="container my-2">
+	<div class="card">
+		<h2 style="text-align: center;padding-top:1.5vw;color:red">Employee List</h2>
+		<div class="card-body">
+		<table class="table table-hover laa">
+			<thead>
+				<tr>
+					<th>Employee Id</th>
+					<th>Employee Name</th>
+					<th>Employee City</th>
+					<th>Employee Department</th>
+					<th>Employee Salary</th>
+					<th style="color:magenta">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="employee:${elist}">
+					<td th:text="${employee.eid}"></td>
+					<td th:text="${employee.name}"></td>
+					<td th:text="${employee.city}"></td>
+					<td th:text="${employee.department}"></td>
+					<td th:text="${employee.salary}"></td>
+					<td>
+						<a th:href="@{/edit-record(eid=${employee.eid})}">Edit |</a>
+						<a th:href="@{/delete-record(eid=${employee.eid})}" onclick="return confirm('Are you sure to delete?')">Remove</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

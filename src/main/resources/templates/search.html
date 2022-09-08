@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="navbar"></div>
+
+<body onload="makeActive('search')">
+<div class="container my-2">
+	<div class="card col-md-10 mx-auto">
+		<div class="card-body">
+		<table class="laa" style="text-align: center;width:100%">
+			<tr class="col-md-10">
+				<td style="padding:1vw">
+				<form action="byId">
+					<table style="width: 100%;">
+						<tr>
+							<td style="width: 25%"><label class="tb">Enter Employee Id</label></td>
+							<td style="width: 60%"><input type="text" name="eid" style="width: 90%;" class="tb"></td>
+							<td style="width: 20%"><button class="btn tb" style="width: 100%;">GO</button></td>
+						</tr>
+					</table>
+				</form>
+				</td>
+			</tr>	
+			<tr class="col-md-10">
+				<td style="padding:1vw">
+				<form action="listByName">
+					<table style="width: 100%;">
+						<tr>
+							<td style="width: 25%"><label class="tb">Enter Employee Name</label></td>
+							<td style="width: 60%"><input type="text" name="name" style="width: 90%;" class="tb"></td>
+							<td style="width: 20%"><button class="btn tb" style="width: 100%;">GO</button></td>
+						</tr>
+					</table>
+				</form>
+				</td>
+			</tr>
+			<tr class="col-md-10">
+				<td style="padding:1vw">
+				<form action="listByCity">
+					<table style="width: 100%;">
+						<tr>
+							<td style="width: 25%"><label class="tb">Select City</label></td>
+							<td style="width: 60%">
+								<select class="tb" name="city" style="width: 90%;">
+									<option th:each="city:${list}" th:text="${city}"></option>
+								</select>
+							</td>
+							<td style="width: 20%"><button class="btn tb" style="width: 100%;">GO</button></td>
+						</tr>
+					</table>
+				</form>
+				</td>
+			</tr>		
+		</table>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
